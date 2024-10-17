@@ -117,10 +117,10 @@
         >
       </li>
     </ul>
-    <a
+    <button
       class="hidden lg:inline-block py-2 px-6 bg-green-500 hover:bg-green-600 text-sm text-white font-bold rounded-xl transition duration-200"
-      
-      >Bog'lanish</a
+      @click="redirectToPhoneNumber()"
+      >Bog'lanish</button
     >
   </div>
   <div class="navbar-menu transition duration-200 relative z-50 hidden">
@@ -185,10 +185,10 @@
             >
           </li>
           <li>
-            <a
+            <button
               class="block p-4 text-sm font-semibold bg-green-500 text-center text-white hover:bg-green-50 hover:text-green-600 rounded"
-              
-              >Bog'lanish</a
+              @click="redirectToPhoneNumber()"
+              >Bog'lanish</button
             >
           </li>
         </ul>
@@ -239,4 +239,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 });
+
+function redirectToPhoneNumber() {
+    const phoneNumber = "+998917622603";
+    window.location.href = `tel:${phoneNumber}`;
+}
 </script>
