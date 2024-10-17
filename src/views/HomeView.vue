@@ -1,8 +1,183 @@
 <script setup>
-import Button from "primevue/button"
+import { RouterLink } from "vue-router";
+import Button from "primevue/button";
+import InputText from "primevue/inputtext";
+import Select from "primevue/select";
+import InputMask from "primevue/inputmask";
+import Toast from "primevue/toast";
+import { useToast } from "primevue/usetoast";
+const toast = useToast();
+import { ref } from "vue";
+
+const name = ref("");
+const surname = ref("");
+const phone = ref("");
+const course = ref("");
+const courses = ref([
+  { name: "Kompyuter savodhonligi", code: "KS" },
+  { name: "Front-End kursi", code: "FE" },
+]);
+
+function sendToTelegram() {
+    if(name.value==='' || surname.value==='' || phone.value==='' || course.value===''){
+    toast.add({
+      severity: "error",
+      summary: "Xatolik",
+      detail: "Barcha ma'lumotlarni to'ldiring to'ldiring",
+      life: 3000,
+    });
+  }else{
+      // Telegram Botning API manzilini va chat ID sini o'zgartiring
+  const telegramBotAPI =
+    "https://api.telegram.org/bot7970652130:AAHZDdcAMFlx7krgvL5GiWDkFsp1Z9QnDvQ/sendMessage";
+  const chatId = "6462444239";
+
+  // Xabarni tayyorlash
+  const message = `Kursga qabul bo'yicha so'rov:
+  Ism: ${name.value}
+  Familiya: ${surname.value}
+  Talab: ${course.value.name}
+  Telefon raqami:${phone.value}
+  `;
+
+
+  // Telegramga so'rov yuborish uchun XMLHttpRequest obyektini yaratish
+  const request = new XMLHttpRequest();
+
+  // POST so'rovi uchun so'rovni tayyorlash
+  request.open("POST", telegramBotAPI, true);
+  request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+  // So'rovni yuborish va javobni tekshirish
+  request.onreadystatechange = function () {
+    if (request.readyState === 4 && request.status === 200) {
+      toast.add({
+        severity: "success",
+        summary: "Muvofaqqiyatli yuborildi",
+        detail: "Siz bilan tez orada aloqaga chiqamiz",
+        life: 3000,
+      });
+      name.value = "";
+      surname.value = "";
+      phone.value = "";
+      course.value = "";
+    }
+  };
+
+  // Xabarni so'rovga joylash va yuborish
+  const params = `chat_id=${chatId}&text=${encodeURIComponent(message)}`;
+  request.send(params);
+  }
+}
 </script>
 
 <template>
-  <h1>Salom Home</h1>
-  <!-- <Button label="Salom" @click="greet" /> -->
+  <section class="w-full h-screen md:h-[80vh]">
+    <div class="container p-4 md:p-8 grid grid-cols-1 md:grid-cols-2 gap-2">
+      <div
+        class="left flex flex-col justify-e gap-9 rounded-lg p-5 md:p-10 bg-green-500 text-white"
+      >
+        <h1 class="text-2xl md:text-4xl font-bold">NamMTi IT Park</h1>
+        <h3>Ro'yxatdan O'tish bo'limi</h3>
+        <p>
+          Assalomu aleykum. Ushbu sayt hozirda test rejimda o'z faoliyatini
+          boshladi. Bizni kuzatishda davom eting saytimizga yangiliklar qo'shib
+          boriladi. Bizda Kompyuter savodhonligi va Web dasturlashning Front-End
+          yo'nalishlari o'rgatiladi.
+        </p>
+        <RouterLink
+          to="/404"
+          class="bg-green-600 w-full md:w-1/2 rounded-lg font-bold hover:bg-green-400 duration-200 text-center p-3"
+          >Biz haqimizda</RouterLink
+        >
+        <div class="marquee-container">
+          <div class="marquee">Sayt test rejimda ishlamoqda!</div>
+        </div>
+      </div>
+      <div
+        class="right  p-5 md:p-10 rounded-lg bg-slate-100 flex flex-col gap-4"
+      >
+      <Toast position="top-center"  style="width: 80%; @media screen and (min-width:768px) {
+        width: auto;
+      }" />
+        <h1 class="text-2xl md:text-4xl text-center font-bold">
+          Ro'yxatdan o'tish
+        </h1>
+        <form class="flex flex-col gap-2">
+          <div class="flex flex-col gap-2">
+            <label for="username">Ism</label>
+            <InputText
+              id="username"
+              v-model="name"
+              aria-describedby="username-help"
+            />
+          </div>
+          <div class="flex flex-col gap-2">
+            <label for="usersecondname">Familiya</label>
+            <InputText
+              id="usesecondname"
+              v-model="surname"
+              aria-describedby="usersecondname-help"
+            />
+          </div>
+          <div class="flex flex-col gap-2">
+            <label for="course">Kurslar</label>
+            <Select
+              v-model="course"
+              :options="courses"
+              optionLabel="name"
+              placeholder="Kursni tanlang"
+              class="w-full"
+            />
+          </div>
+          <div class="flex flex-col gap-2">
+            <label for="phone">Tell</label>
+            <InputMask
+              v-model="phone"
+              mask="+998(99) 999-99-99"
+              placeholder="+998(99) 999-99-99"
+              fluid
+            />
+          </div>
+          <button
+            @click="sendToTelegram()"
+            type="button"
+            class="bg-green-600 w-full text-white rounded-lg font-bold hover:bg-green-400 duration-200 text-center p-3"
+          >
+            Ro'yxatdan o'tish
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
 </template>
+<style scoped>
+.marquee-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.marquee {
+  font-family: "Courier New", Courier, monospace;
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 10s linear infinite alternate;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+@media (min-width: 768px) {
+  
+}
+</style>
