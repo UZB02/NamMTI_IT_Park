@@ -14,7 +14,7 @@ import Footer from "./components/Footer/Footer.vue"
   </header>
 <RouterView />
 
-<footer class="text-white">
+<footer class="text-white bg-gray-800">
   <Footer></Footer>
 </footer>
 
