@@ -184,9 +184,9 @@
               >Yangiliklar</RouterLink
             >
           </li>
-          <li>
+          <li class="w-full">
             <button
-              class="block p-4 text-sm font-semibold bg-green-500 text-center text-white hover:bg-green-50 hover:text-green-600 rounded"
+              class="block w-full p-4 text-sm font-semibold bg-green-500 text-center text-white hover:bg-green-50 hover:text-green-600 rounded"
               @click="redirectToPhoneNumber()"
               >Bog'lanish</button
             >

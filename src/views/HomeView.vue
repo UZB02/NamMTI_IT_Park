@@ -72,7 +72,7 @@ function sendToTelegram() {
 </script>
 
 <template>
-  <section class="w-full h-screen md:h-[80vh]">
+  <section class="w-full">
     <div class="container p-4 md:p-8 grid grid-cols-1 md:grid-cols-2 gap-2">
       <div
         class="left flex flex-col justify-e gap-9 rounded-lg p-5 md:p-10 bg-green-500 text-white"
