@@ -10,8 +10,8 @@ const { isDarkTheme } = useLayout();
 <template>
   <header class="sticky top-0 z-[10]">
     <nav
-      class="sticky top-0 px-4 py-4 flex justify-between items-center bg-white border-b"
-      :class="isDarkTheme ? 'bg-slate-800' : ' '"
+      class="sticky top-0 px-4 py-4 flex justify-between items-center  border-b"
+      :class="isDarkTheme ? 'bg-slate-800' : 'bg-white '"
     >
       <div class="container mx-0">
         <Nav></Nav>
