@@ -119,8 +119,8 @@
   </div>
   <div class="navbar-menu transition duration-200 relative z-50 hidden">
     <nav
-      class="fixed top-0 left-0 z-50 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto"
-      :class="isDarkTheme ? 'bg-slate-800' : ' '"
+      class="fixed top-0 left-0 z-50 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 border-r overflow-y-auto"
+      :class="isDarkTheme ? 'bg-slate-800' : ' bg-white '"
     >
       <div class="flex items-center mb-8">
         <a class="mr-auto text-3xl font-bold leading-none">
