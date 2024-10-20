@@ -47,5 +47,7 @@
 </template>
 
 <script setup>
+import { useLayout } from "@/layouts/composables/layout";
 import { RouterLink } from "vue-router";
+const { toggleDarkMode, isDarkTheme } = useLayout();
 </script>

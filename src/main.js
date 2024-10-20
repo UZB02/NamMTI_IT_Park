@@ -8,6 +8,7 @@ import Aura from "@primevue/themes/aura";
 import ToastService from "primevue/toastservice";
 import AnimateOnScroll from "primevue/animateonscroll";
 
+
 const app = createApp(App);
 app.directive("animateonscroll", AnimateOnScroll);
 app.use(router);
@@ -15,9 +16,7 @@ app.use(PrimeVue, {
   theme: {
     preset: Aura,
     options: {
-      prefix: "p",
-      darkModeSelector: "light",
-      cssLayer: false,
+      darkModeSelector: ".app-dark",
     },
   },
 });

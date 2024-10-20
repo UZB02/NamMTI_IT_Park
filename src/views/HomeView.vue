@@ -8,6 +8,9 @@ import Toast from "primevue/toast";
 import { useToast } from "primevue/usetoast";
 const toast = useToast();
 import { ref } from "vue";
+import { useLayout } from "@/layouts/composables/layout";
+
+const { isDarkTheme } = useLayout();
 
 const name = ref("");
 const surname = ref("");
@@ -19,54 +22,61 @@ const courses = ref([
 ]);
 
 function sendToTelegram() {
-    if(name.value==='' || surname.value==='' || phone.value==='' || course.value===''){
+  if (
+    name.value === "" ||
+    surname.value === "" ||
+    phone.value === "" ||
+    course.value === ""
+  ) {
     toast.add({
       severity: "error",
       summary: "Xatolik",
-      detail: "Barcha ma'lumotlarni to'ldiring to'ldiring",
+      detail: "Barcha ma'lumotlarni to'ldiring!",
       life: 3000,
     });
-  }else{
-      // Telegram Botning API manzilini va chat ID sini o'zgartiring
-  const telegramBotAPI =
-    "https://api.telegram.org/bot7970652130:AAHZDdcAMFlx7krgvL5GiWDkFsp1Z9QnDvQ/sendMessage";
-  const chatId = "6462444239";
+  } else {
+    // Telegram Botning API manzilini va chat ID sini o'zgartiring
+    const telegramBotAPI =
+      "https://api.telegram.org/bot7970652130:AAHZDdcAMFlx7krgvL5GiWDkFsp1Z9QnDvQ/sendMessage";
+    const chatId = "6462444239";
 
-  // Xabarni tayyorlash
-  const message = `Kursga qabul bo'yicha so'rov:
+    // Xabarni tayyorlash
+    const message = `Kursga qabul bo'yicha so'rov:
   Ism: ${name.value}
   Familiya: ${surname.value}
   Talab: ${course.value.name}
   Telefon raqami:${phone.value}
   `;
 
+    // Telegramga so'rov yuborish uchun XMLHttpRequest obyektini yaratish
+    const request = new XMLHttpRequest();
 
-  // Telegramga so'rov yuborish uchun XMLHttpRequest obyektini yaratish
-  const request = new XMLHttpRequest();
+    // POST so'rovi uchun so'rovni tayyorlash
+    request.open("POST", telegramBotAPI, true);
+    request.setRequestHeader(
+      "Content-type",
+      "application/x-www-form-urlencoded"
+    );
 
-  // POST so'rovi uchun so'rovni tayyorlash
-  request.open("POST", telegramBotAPI, true);
-  request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    // So'rovni yuborish va javobni tekshirish
+    request.onreadystatechange = function () {
+      if (request.readyState === 4 && request.status === 200) {
+        toast.add({
+          severity: "success",
+          summary: "Muvofaqqiyatli yuborildi",
+          detail: "Siz bilan tez orada aloqaga chiqamiz",
+          life: 3000,
+        });
+        name.value = "";
+        surname.value = "";
+        phone.value = "";
+        course.value = "";
+      }
+    };
 
-  // So'rovni yuborish va javobni tekshirish
-  request.onreadystatechange = function () {
-    if (request.readyState === 4 && request.status === 200) {
-      toast.add({
-        severity: "success",
-        summary: "Muvofaqqiyatli yuborildi",
-        detail: "Siz bilan tez orada aloqaga chiqamiz",
-        life: 3000,
-      });
-      name.value = "";
-      surname.value = "";
-      phone.value = "";
-      course.value = "";
-    }
-  };
-
-  // Xabarni so'rovga joylash va yuborish
-  const params = `chat_id=${chatId}&text=${encodeURIComponent(message)}`;
-  request.send(params);
+    // Xabarni so'rovga joylash va yuborish
+    const params = `chat_id=${chatId}&text=${encodeURIComponent(message)}`;
+    request.send(params);
   }
 }
 </script>
@@ -76,6 +86,7 @@ function sendToTelegram() {
     <div class="container p-4 md:p-8 grid grid-cols-1 md:grid-cols-2 gap-2">
       <div
         class="left flex flex-col justify-e gap-9 rounded-lg p-5 md:p-10 bg-green-500 text-white"
+        :class="isDarkTheme ? 'bg-slate-900/50' : ''"
       >
         <h1 class="text-2xl md:text-4xl font-bold">NamMTi IT Park</h1>
         <h3>Ro'yxatdan O'tish bo'limi</h3>
@@ -95,11 +106,13 @@ function sendToTelegram() {
         </div>
       </div>
       <div
-        class="right  p-5 md:p-10 rounded-lg bg-slate-100 flex flex-col gap-4"
+        class="right p-5 md:p-10 rounded-lg bg-slate-100 flex flex-col gap-4"
+        :class="isDarkTheme ? 'bg-slate-900/50' : ''"
       >
-      <Toast position="top-center"  style="width: 80%; @media screen and (min-width:768px) {
-        width: auto;
-      }" />
+        <Toast
+          position="top-center"
+          style="width: 80%; @media screen and (min-width: 768px) {width: auto}"
+        />
         <h1 class="text-2xl md:text-4xl text-center font-bold">
           Ro'yxatdan o'tish
         </h1>
@@ -134,7 +147,7 @@ function sendToTelegram() {
             <label for="phone">Tell</label>
             <InputMask
               v-model="phone"
-              mask="+998(99) 999-99-99"
+              mask="+999(99) 999-99-99"
               placeholder="+998(99) 999-99-99"
               fluid
             />
@@ -176,8 +189,6 @@ function sendToTelegram() {
   }
 }
 
-
 @media (min-width: 768px) {
-  
 }
 </style>
