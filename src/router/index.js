@@ -27,6 +27,14 @@ const router = createRouter({
       },
     },
     {
+      path: "/courses/computer_literacy",
+      name: "Computer Literacy",
+      component: () => import("../views/CoursesIDView.vue"),
+      meta: {
+        layout: CoursesLayout,
+      },
+    },
+    {
       path: "/404",
       name: "404",
       // route level code-splitting
