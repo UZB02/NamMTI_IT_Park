@@ -11,7 +11,7 @@ const { isDarkTheme } = useLayout();
   <header class="sticky top-0 z-[10]">
     <nav
       class="sticky top-0 px-4 py-4 flex justify-between items-center  border-b"
-      :class="isDarkTheme ? 'bg-slate-800' : 'bg-white '"
+      :class="isDarkTheme ? 'bg-slate-800 border-slate-700' : 'bg-white '"
     >
       <div class="container mx-0">
         <Nav></Nav>
@@ -23,7 +23,7 @@ const { isDarkTheme } = useLayout();
     <RouterView />
   </div>
 
-  <footer class="text-white bg-slate-800" :class="isDarkTheme ? 'border-t' : ' '">
+  <footer class="text-white bg-slate-800" :class="isDarkTheme ? 'border-t border-slate-700' : ' '">
     <Footer></Footer>
   </footer>
 </template>
