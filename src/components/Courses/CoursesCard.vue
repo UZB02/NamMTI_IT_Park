@@ -24,7 +24,7 @@
         >
           {{ item.title }}
         </h1>
-        <p  :class="isDarkTheme ? 'text-slate-50' : 'text-slate-400'">{{ item.description }}</p>
+        <p  :class="isDarkTheme ? 'text-slate-50' : 'text-slate-400'">{{ item.teacher }}</p>
         </span>
         <RouterLink
           :to='item.path'
@@ -47,41 +47,71 @@ const data = ref([
   {
     id: 1,
     title: "Komputer Savodxonligi",
-    path:"/404",
-    price:"200 ming",
+    path:"/courses/computer_literacy",
+    price:"200 ming/oy",
     image:
       "https://avatars.mds.yandex.net/i?id=ab557b4735adf502e4350528c21bca11-4478965-images-thumbs&n=13",
-    description:
+    teacher:
       "Muhsinbek Mirzamatov",
   },
   {
     id: 2,
     title: "Frontend",
      path:"/404",
-      price:"400 ming",
+      price:"400 ming/oy",
     image:
       "https://i.pinimg.com/736x/16/3f/59/163f59388d9cd84e184c5e0bdf6647a7.jpg",
-    description: "Muhsinbek Mirzamatov",
+    teacher: "Muhsinbek Mirzamatov",
   },
   {
     id: 3,
     title: "Backend",
      path:"/404",
-      price:"tez orada",
+      price:"400 ming/oy",
     image:
       "https://avatars.mds.yandex.net/i?id=eacaed3574366176bc9694d2bd9111d592b1267e-5486461-images-thumbs&n=13",
-    description:
-      "Tez orada",
+    teacher:
+      "Ilyosbek Sulaymanov",
   },
   {
     id: 4,
-    title: "Grafik Dizayn",
+    title: "React.js, Node.js and TypeScript",
+     path:"/404",
+     price:"500 ming/oy",
+    image:
+      "https://miro.medium.com/v2/resize:fit:1400/1*jMiDBItXndC7DXxkM8sFIA.png",
+    teacher:
+      "Suhrob Rahmatullayev",
+  },
+  {
+    id: 5,
+    title: "Python va Telegram bot",
+     path:"/404",
+     price:"500 ming/oy",
+    image:
+      "https://netslovers.com/wp-content/uploads/2022/08/telegram-bot-python-1122x631.png",
+    teacher:
+      "Ilyosbek Sulaymanov",
+  },
+  {
+    id: 6,
+    title: "Next.js",
+     path:"/404",
+     price:"500 ming/oy",
+    image:
+      "https://repository-images.githubusercontent.com/408165438/6336b1cb-bd02-4347-992b-9b532df7e2bd",
+    teacher:
+      "Suhrob Rahmatullayev",
+  },
+  {
+    id: 7,
+    title: "SMM",
      path:"/404",
      price:"tez orada",
     image:
-      "https://avatars.mds.yandex.net/i?id=5c51f45808bf9ad6c8e85487c7c149127baeb98f-8389316-images-thumbs&n=13",
-    description:
-      "Tez orada",
+      "https://ludi.by/wp-content/uploads/2021/11/ridi.jpeg",
+    teacher:
+      "tez orada",
   },
 ]);
 </script>
