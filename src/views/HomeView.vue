@@ -19,6 +19,10 @@ const course = ref("");
 const courses = ref([
   { name: "Kompyuter savodhonligi", code: "KS" },
   { name: "Front-End kursi", code: "FE" },
+  { name: "Backend kursi", code: "BE" },
+  { name: "React.js, Node.js va Typescript kurslari", code: "RNT" },
+  { name: "Python va Telegram bot kurslari", code: "PTG" },
+  { name: "Next.js kursi", code: "N" },
 ]);
 
 function sendToTelegram() {
