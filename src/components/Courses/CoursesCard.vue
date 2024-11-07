@@ -1,10 +1,10 @@
 <template>
-  <div class="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-2 p-3">
+  <div class="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 gap-2 p-3">
     <RouterLink
       v-for="item in data"
       :key="item.id"
       :to='item.path'
-      class="card border rounded-tl-lg rounded-tr-lg relative flex flex-col justify-center gap-2 bg-slate-50"
+      class="card border rounded-tl-lg  rounded-tr-lg relative flex flex-col justify-center gap-2 bg-slate-50"
       :class="isDarkTheme ? 'bg-slate-700 border-slate-700' : ''"
     >
     <span :class="isDarkTheme ? 'absolute right-1 top-1 bg-slate-800 z-[8] px-1 rounded text-white' : 'absolute right-1 top-1 bg-green-400 px-1 rounded text-white z-[8]'">

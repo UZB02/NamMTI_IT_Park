@@ -87,7 +87,7 @@ const { isDarkTheme } = useLayout();
 
 const isSibar=ref(false)
 const categories = ref([
-  { id: 1, name: "Barcha kurslar", path: "/", icon: "pi pi-warehouse" },
+  { id: 1, name: "Barcha kurslar", path: "/courses", icon: "pi pi-warehouse" },
   {
     id: 2,
     name: "Kompyuter savodxonligi",
