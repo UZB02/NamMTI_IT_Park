@@ -14,9 +14,9 @@
   </div>
     <div
     class="lg:border-r h-screen" 
-     :class="isSibar ? 'lg:flex absolute w-full z-[9] flex-col col-span-12  gap-2 lg:col-span-3  border-b py-2 ' : 'lg:flex flex-col col-span-12 w-full hidden gap-2 lg:col-span-3 h-screen  py-2'">
+     :class="isSibar ? 'lg:flex fixed top-24 w-full z-[9] flex-col col-span-12  gap-2 lg:col-span-3  border-b  ' : 'lg:flex flex-col col-span-12 w-full hidden gap-2 lg:col-span-3 h-screen  py-2'">
         <div
-        class="h-screen flex flex-col gap-2"
+        class="h-screen flex flex-col gap-2 py-2"
       :class="isDarkTheme  ? 'bg-slate-800 px-2' : 'bg-white px-2' "
     >
       <div class="flex justify-between">
