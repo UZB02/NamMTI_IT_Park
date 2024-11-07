@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-2 p-3">
+  <div class="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-2 p-3">
     <RouterLink
       v-for="item in data"
       :key="item.id"
@@ -12,7 +12,7 @@
     </span>
       <div class="top rounded-tl-lg rounded-tr-lg overflow-hidden">
         <img
-          class="w-full h-[150px] md:h-[250px] rounded-tl-lg rounded-tr-lg object-cover transition-transform duration-300 hover:scale-110"
+          class="w-full h-[150px] lg:h-[250px] rounded-tl-lg rounded-tr-lg object-cover transition-transform duration-300 hover:scale-110"
           :src="item.image"
           alt=""
         />
@@ -20,7 +20,7 @@
       <div class="bottom  flex justify-center flex-col gap-2">
         <span class="flex flex-col px-2">
           <h1
-          class="md:text-xl text-lg font-bold whitespace-nowrap overflow-hidden text-overflow-ellipsis"
+          class="lg:text-xl text-lg font-bold whitespace-nowrap overflow-hidden text-overflow-ellipsis"
         >
           {{ item.title }}
         </h1>
