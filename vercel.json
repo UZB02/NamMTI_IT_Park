@@ -5,6 +5,10 @@
       "dest": "/index.html"
     },
     {
+      "src": "/courses/computer_literacy",
+      "dest": "/index.html"
+    },
+    {
       "src": "/404",
       "dest": "/index.html"
     }
