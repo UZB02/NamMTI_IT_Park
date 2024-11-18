@@ -7,9 +7,13 @@
         : 'container mx-auto grid grid-cols-12'
     "
   >
-  <div class="lg:hidden p-2">
-    <div @click="toggleSideBar()">
-        <i class="pi pi-align-left"></i>
+  <div class="lg:hidden p-2 col-span-12 flex justify-between items-center">
+    <div @click="toggleSideBar()" :class="isDarkTheme ? 'bg-slate-900/50 p-1 rounded font-bold flex items-center justify-center gap-2' : 'flex items-center justify-center gap-2 bg-green-400 p-1 rounded text-white font-bold'">
+        <i class="pi pi-align-left"></i><h3>Kurslar</h3>
+    </div>
+    <div class="flex items-center justify-center gap-4 font-bold">
+      <i class="pi pi-send"></i>
+      <i class="pi pi-phone"></i>
     </div>
   </div>
     <div
