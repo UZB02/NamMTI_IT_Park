@@ -1,9 +1,6 @@
 <template>
     <section class="sm:h-screen py-5 font-sans">
         <div class="container">
-            <!-- <div class="px-4">
-                <Breadcrumb :home="home" :model="items" :class="isDarkTheme ? 'bg-slate-800' : ''"/>
-            </div> -->
             <div class="top flex flex-col gap-2 sm:flex-row justify-center">
                 <span class="w-full flex flex-col gap-2  px-2">
                    <div class="flex flex-col gap-2 px-2">
@@ -55,19 +52,7 @@
 <script setup>
 import { useLayout } from "@/layouts/composables/layout";
 const { isDarkTheme } = useLayout();
-import Breadcrumb from 'primevue/breadcrumb'
 import { ref } from "vue";
-
-const home = ref({
-    icon: 'pi pi-home'
-});
-const items = ref([
-    { label: 'Electronics' }, 
-    { label: 'Computer' }, 
-    { label: 'Accessories' }, 
-    { label: 'Keyboard' }, 
-    { label: 'Wireless' }
-]);
 </script>
 <style scoped>
     
