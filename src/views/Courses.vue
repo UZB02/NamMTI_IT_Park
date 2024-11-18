@@ -31,9 +31,12 @@ import { ref, watch } from "vue";
 const value = ref('');
 const selectedCourse = ref('');
 const courses = ref([
-    { name: 'Kompyuter savodxonligi', code: 'KS' },
-    { name: 'Frontend', code: 'FE' },
-    { name: 'Backend', code: 'BK' },
+    { name: "Kompyuter savodhonligi", code: "KS" },
+  { name: "Front-End kursi", code: "FE" },
+  { name: "Backend kursi", code: "BE" },
+  { name: "React.js, Node.js va Typescript kurslari", code: "RNT" },
+  { name: "Python va Telegram bot kurslari", code: "PTG" },
+  { name: "Next.js kursi", code: "N" },
 ]);
 
 watch(selectedCourse, (newValue) => {
