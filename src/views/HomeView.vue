@@ -41,8 +41,8 @@ function sendToTelegram() {
   } else {
     // Telegram Botning API manzilini va chat ID sini o'zgartiring
     const telegramBotAPI =
-      "https://api.telegram.org/bot7970652130:AAHZDdcAMFlx7krgvL5GiWDkFsp1Z9QnDvQ/sendMessage";
-    const chatId = "6462444239";
+      "https://api.telegram.org/bot7701567113:AAGztO-X16VG_jG0AkJy2lZJ3s7bYKXtnnY/sendMessage";
+    const chatId = "7742492388";
 
     // Xabarni tayyorlash
     const message = `Kursga qabul bo'yicha so'rov:
@@ -173,6 +173,15 @@ function sendToTelegram() {
         </form>
       </div>
     </div>
+  </section>
+  <section>
+   <div class="container flex flex-col gap-2">
+    <span class="flex items-center justify-center gap-2 text-xl font-bold lg:text-3xl">
+      <i class="pi pi-map-marker"></i>
+      <h1>Bizning Manzil</h1>
+    </span>
+     <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d419.4403036092748!2d71.5928560917185!3d40.99750164329597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1snamangan%20muhandislik%20texnologiya%20instituti!5e1!3m2!1sen!2s!4v1732160968457!5m2!1sen!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+   </div>
   </section>
 </template>
 <style scoped>
