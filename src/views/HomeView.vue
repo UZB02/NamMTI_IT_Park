@@ -177,7 +177,7 @@ function sendToTelegram() {
   <section>
    <div class="container flex flex-col gap-2">
     <span class="flex items-center justify-center gap-2 text-xl font-bold lg:text-3xl">
-      <i class="pi pi-map-marker"></i>
+      <!-- <i class="pi pi-map-marker"></i> -->
       <h1>Bizning Manzil</h1>
     </span>
      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2862.2604855642!2d71.59037677585793!3d40.99779447135197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb4babfd770f23%3A0x49c196c8aec07577!2sNamMTI%208-BINO!5e1!3m2!1sen!2s!4v1732189556820!5m2!1sen!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
