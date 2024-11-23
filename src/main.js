@@ -7,7 +7,10 @@ import PrimeVue from "primevue/config";
 import Aura from "@primevue/themes/aura";
 import ToastService from "primevue/toastservice";
 import AnimateOnScroll from "primevue/animateonscroll";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
+AOS.init();
 
 const app = createApp(App);
 app.directive("animateonscroll", AnimateOnScroll);

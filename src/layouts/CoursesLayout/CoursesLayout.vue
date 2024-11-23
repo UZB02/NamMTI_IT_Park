@@ -7,7 +7,7 @@
         : 'container mx-auto grid grid-cols-12'
     "
   >
-  <div class="lg:hidden p-2 col-span-12 flex justify-between items-center" :class="isDarkTheme ? 'border-b border-slate-700' :''">
+  <div  class="lg:hidden transition-all duration-500 p-2 col-span-12 flex justify-between items-center" :class="isDarkTheme ? 'border-b border-slate-700' :''">
     <div @click="toggleSideBar()" class="px-2" :class="isDarkTheme ? 'bg-slate-900/50 p-1 px-2 rounded font-bold flex items-center justify-center gap-2' : 'flex items-center justify-center gap-2 bg-green-400 p-1 rounded text-white font-bold'">
         <i class="pi pi-align-left"></i><h3>Kurslar</h3>
     </div>
@@ -16,12 +16,13 @@
       <i @click="redirectToPhoneNumber()" class="pi pi-phone" :class="isDarkTheme ? 'border p-1 rounded border-slate-700' : 'text-slate-500 border p-1 rounded '"></i>
     </div>
   </div>
-    <div
+    <div 
     class="lg:border-r h-screen" 
      :class="isSibar ? 'lg:flex fixed top-24 w-full z-[9] flex-col col-span-12  gap-2 lg:col-span-3  border-b  ' : 'lg:flex flex-col col-span-12 w-full hidden gap-2 lg:col-span-3 h-screen  py-2'">
         <div
         class="h-screen flex flex-col gap-2 py-2"
       :class="isDarkTheme  ? 'bg-slate-800 px-2' : 'bg-white px-2' "
+      data-aos="fade-right"
     >
       <div class="flex justify-between">
         <span class="">
@@ -39,7 +40,7 @@
           :class="
             isDarkTheme
               ? 'bg-slate-700/50 transition-all duration-200 hover:bg-slate-700/20 rounded-lg w-full flex items-center gap-2  p-2'
-              : 'bg-slate-200 transition-all duration-200 hover:bg-slate-200/50  rounded-lg w-full flex items-center gap-2  p-2'
+              : 'bg-slate-100 transition-all duration-200 hover:bg-slate-200  rounded-lg w-full flex items-center gap-2  p-2'
           "
         >
           <i :class="item.icon"></i>{{ item.name }}
@@ -47,7 +48,7 @@
       </div>
     </div>
     </div>
-    <div class="col-span-12 h-screen overflow-y-scroll lg:col-span-9">
+    <div data-aos="fade-left" class="col-span-12 h-screen overflow-y-scroll lg:col-span-9">
       <RouterView></RouterView>
     </div>
   </section>
