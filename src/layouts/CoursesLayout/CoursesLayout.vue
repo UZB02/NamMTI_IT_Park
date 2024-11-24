@@ -22,7 +22,6 @@
         <div
         class="h-screen flex flex-col gap-2 py-2"
       :class="isDarkTheme  ? 'bg-slate-800 px-2' : 'bg-white px-2' "
-      data-aos="fade-right"
     >
       <div class="flex justify-between">
         <span class="">

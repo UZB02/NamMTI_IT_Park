@@ -89,7 +89,6 @@ function sendToTelegram() {
   <section class="w-full">
     <div class="container p-4 md:p-8 grid grid-cols-1 md:grid-cols-2 gap-2">
       <div
-      data-aos="zoom-in-down"
         class="left flex flex-col justify-e gap-9 rounded-lg p-5 md:p-10 bg-green-500 text-white"
         :class="isDarkTheme ? 'bg-slate-900/50' : ''"
       >
@@ -111,7 +110,6 @@ function sendToTelegram() {
         </div>
       </div>
       <div
-      data-aos="zoom-in-down"
         class="right p-5 md:p-10 rounded-lg bg-slate-100 flex flex-col gap-4"
         :class="isDarkTheme ? 'bg-slate-900/50' : ''"
       >
@@ -175,7 +173,7 @@ function sendToTelegram() {
       <!-- <i class="pi pi-map-marker"></i> -->
       <h1>Bizning Manzil</h1>
     </span>
-     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2862.2604855642!2d71.59037677585793!3d40.99779447135197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb4babfd770f23%3A0x49c196c8aec07577!2sNamMTI%208-BINO!5e1!3m2!1sen!2s!4v1732189556820!5m2!1sen!2s" class="w-[98%] lg:w-full h-[200px] lg:h-[350px]" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2862.2604855642!2d71.59037677585793!3d40.99779447135197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb4babfd770f23%3A0x49c196c8aec07577!2sNamMTI%208-BINO!5e1!3m2!1sen!2s!4v1732189556820!5m2!1sen!2s" class="w-[98%] lg:w-full h-[200px] lg:h-[350px] rounded" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
    </div>
   </section>
 </template>
