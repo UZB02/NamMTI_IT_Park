@@ -9,6 +9,10 @@
       "dest": "/index.html"
     },
     {
+      "src": "/courses/front_end",
+      "dest": "/index.html"
+    },
+    {
       "src": "/404",
       "dest": "/index.html"
     }
