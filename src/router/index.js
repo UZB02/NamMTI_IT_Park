@@ -36,6 +36,14 @@ const router = createRouter({
       },
     },
     {
+      path: "/courses/front_end",
+      name: "Front End",
+      component: () => import("../views/FrontEndID.vue"),
+      meta: {
+        layout: CoursesLayout,
+      },
+    },
+    {
       path: "/404",
       name: "404",
       // route level code-splitting
