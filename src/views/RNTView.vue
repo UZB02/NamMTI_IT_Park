@@ -8,11 +8,11 @@
             >
                <div class="flex flex-col gap-3 justify-center">
                  <h1 class="text-2xl md:text-6xl">Reackt, NodeJs va TypeScript dasturlash kurslari</h1>
-                <h2 class="text-xl lg:text-2xl">Web dasturlash yo'nalishining muhum qismi!</h2>
+                <h2 class="text-lg lg:text-2xl">Web dasturlash yo'nalishining muhum qismi!</h2>
                 <ul class="grid grid-cols-1 items-center justify-center gap-2">
-                    <li class="flex items-center "><h1 class="text-xl text-slate-400" :class="isDarkTheme ? 'text-slate-200' : ''">Reakt</h1></li>
-                    <li class="flex items-center "><h1 class="text-xl text-slate-400" :class="isDarkTheme ? 'text-slate-200' : ''">Node.js</h1></li>
-                    <li class="flex items-center "><h1 class="text-xl text-slate-400" :class="isDarkTheme ? 'text-slate-200' : ''">TypeScript</h1> </li>
+                    <li class="flex items-center "><h1 class="text-base text-slate-400" :class="isDarkTheme ? 'text-slate-200' : ''">Reakt</h1></li>
+                    <li class="flex items-center "><h1 class="text-base text-slate-400" :class="isDarkTheme ? 'text-slate-200' : ''">Node.js</h1></li>
+                    <li class="flex items-center "><h1 class="text-base text-slate-400" :class="isDarkTheme ? 'text-slate-200' : ''">TypeScript</h1> </li>
                     <!-- <li class="flex items-center "><h1 class="text-xl text-slate-400" :class="isDarkTheme ? 'text-slate-200' : ''">Reakt</h1></li> -->
                 </ul>
                 <div><h3 :class="isDarkTheme ? 'text-slate-300' : 'text-slate-400'">Kurs narxi: 500 ming so'm / oy</h3></div>

@@ -8,7 +8,7 @@
             >
                <div class="flex flex-col gap-3 justify-center">
                  <h1 class="text-2xl md:text-6xl">Backend dasturlash kurslari</h1>
-                <h2 class="text-xl lg:text-2xl">Web dasturlash yo'nalishining muhum qismi!</h2>
+                <h2 class="text-lg lg:text-2xl">Web dasturlash yo'nalishining muhum qismi!</h2>
                 <ul class="grid grid-cols-3 items-center justify-center gap-2">
                     <li class="flex items-center "><img class="" src="../img/python.png" alt=""></li>
                     <li class="flex items-center "><img class="" src="../img/djrest.png" alt=""></li>

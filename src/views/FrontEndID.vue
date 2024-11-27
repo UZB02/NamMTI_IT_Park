@@ -8,7 +8,7 @@
             >
                <div class="flex flex-col gap-3 justify-center">
                  <h1 class="text-2xl md:text-6xl">Front-End dasturlash kurslari</h1>
-                <h2 class="text-xl lg:text-2xl">Web dasturlash yo'nalishining asosiy qismi!</h2>
+                <h2 class="text-lg lg:text-2xl">Web dasturlash yo'nalishining asosiy qismi!</h2>
                 <ul class="flex justify-center gap-2 flex-wrap">
                     <li class="flex items-center w-[30%] lg:w-1/4"><img class="w-[50%]" src="../img/html.png" alt=""></li>
                     <li class="flex items-center w-[30%] lg:w-1/4"><img class="w-[45%]" src="../img/css.png" alt=""></li>
