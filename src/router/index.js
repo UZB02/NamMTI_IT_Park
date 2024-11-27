@@ -52,6 +52,22 @@ const router = createRouter({
       },
     },
     {
+      path: "/courses/react",
+      name: "React",
+      component: () => import("../views/RNTView.vue"),
+      meta: {
+        layout: CoursesLayout,
+      },
+    },
+    {
+      path: "/courses/tg_bot",
+      name: "Telegram Bot",
+      component: () => import("../views/TgBotView.vue"),
+      meta: {
+        layout: CoursesLayout,
+      },
+    },
+    {
       path: "/404",
       name: "404",
       // route level code-splitting

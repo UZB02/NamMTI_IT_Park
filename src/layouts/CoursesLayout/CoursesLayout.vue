@@ -72,13 +72,13 @@ const categories = ref([
   {
     id: 5,
     name: "Reackt.js, Node.js va TypeScript",
-    path: "/404",
+    path: "/courses/react",
     icon: "pi pi-objects-column",
   },
   {
     id: 8,
     name: "Python && Telegram Bot",
-    path: "/404",
+    path: "/courses/tg_bot",
     icon: "pi pi-objects-column",
   },
   { id: 7, name: "Next.js", path: "/404", icon: "pi pi-objects-column" },
