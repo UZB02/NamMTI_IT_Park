@@ -68,7 +68,7 @@ const categories = ref([
     icon: "pi pi-desktop",
   },
   { id: 3, name: "Frontend", path: "/courses/front_end", icon: "pi pi-code" },
-  { id: 4, name: "Backend", path: "/404", icon: "pi pi-database" },
+  { id: 4, name: "Backend", path: "/courses/backend", icon: "pi pi-database" },
   {
     id: 5,
     name: "Reackt.js, Node.js va TypeScript",

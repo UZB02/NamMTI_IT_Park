@@ -44,6 +44,14 @@ const router = createRouter({
       },
     },
     {
+      path: "/courses/backend",
+      name: "Backend",
+      component: () => import("../views/BackendIDView.vue"),
+      meta: {
+        layout: CoursesLayout,
+      },
+    },
+    {
       path: "/404",
       name: "404",
       // route level code-splitting
