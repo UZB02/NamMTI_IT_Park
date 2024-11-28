@@ -89,6 +89,7 @@ function sendToTelegram() {
   <section class="w-full">
     <div class="container p-4 md:p-8 grid grid-cols-1 md:grid-cols-2 gap-2">
       <div
+      v-motion-slide-left
         class="left flex flex-col justify-e gap-9 rounded-lg p-5 md:p-10 bg-green-500 text-white"
         :class="isDarkTheme ? 'bg-slate-900/50' : ''"
       >
@@ -110,6 +111,7 @@ function sendToTelegram() {
         </div>
       </div>
       <div
+      v-motion-slide-right
         class="right p-5 md:p-10 rounded-lg bg-slate-100 flex flex-col gap-4"
         :class="isDarkTheme ? 'bg-slate-900/50' : ''"
       >

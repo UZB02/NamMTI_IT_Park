@@ -9,10 +9,12 @@ import ToastService from "primevue/toastservice";
 import AnimateOnScroll from "primevue/animateonscroll";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { MotionPlugin } from "@vueuse/motion";
 
 AOS.init();
 
 const app = createApp(App);
+app.use(MotionPlugin);
 app.directive("animateonscroll", AnimateOnScroll);
 app.use(router);
 app.use(PrimeVue, {

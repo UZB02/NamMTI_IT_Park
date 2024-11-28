@@ -7,7 +7,7 @@
         : 'container mx-auto grid grid-cols-12'
     "
   >
-  <div  class="lg:hidden transition-all duration-500 p-2 col-span-12 flex justify-between items-center" :class="isDarkTheme ? 'border-b border-slate-700' :''">
+  <div v-motion-pop-visible-once class="lg:hidden transition-all duration-500 p-2 col-span-12 flex justify-between items-center" :class="isDarkTheme ? 'border-b border-slate-700' :''">
     <div @click="toggleSideBar()" class="px-2" :class="isDarkTheme ? 'bg-slate-900/50 p-1 px-2 rounded font-bold flex items-center justify-center gap-2' : 'flex items-center justify-center gap-2 bg-green-400 p-1 rounded text-white font-bold'">
         <i class="pi pi-align-left"></i><h3>Kurslar</h3>
     </div>
@@ -17,6 +17,7 @@
     </div>
   </div>
     <div 
+    v-motion-pop-visible-once
     class="lg:border-r h-screen" 
      :class="isSibar ? 'lg:flex fixed top-24 w-full z-[9] flex-col col-span-12  gap-2 lg:col-span-3  border-b  ' : 'lg:flex flex-col col-span-12 w-full hidden gap-2 lg:col-span-3 h-screen  py-2'">
         <div
@@ -47,7 +48,7 @@
       </div>
     </div>
     </div>
-    <div data-aos="fade-left" class="col-span-12 h-screen overflow-y-scroll lg:col-span-9">
+    <div  class="col-span-12 h-screen overflow-y-scroll lg:col-span-9">
       <RouterView></RouterView>
     </div>
   </section>
