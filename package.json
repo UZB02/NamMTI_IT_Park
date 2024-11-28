@@ -17,8 +17,9 @@
     "vue-router": "^4.4.5"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^5.1.4",
+    "@vitejs/plugin-vue": "^5.2.1",
     "@vitejs/plugin-vue-jsx": "^4.0.1",
+    "@vueuse/motion": "^2.2.6",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.47",
     "sass-embedded": "^1.80.3",
