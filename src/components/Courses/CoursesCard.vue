@@ -19,7 +19,7 @@
         />
       </div>
       <div class="bottom  flex justify-center flex-col gap-2">
-        <span class="flex flex-col px-2">
+        <span class="flex flex-col p-3">
           <h1
           class="lg:text-xl text-lg font-bold whitespace-nowrap overflow-hidden text-overflow-ellipsis"
         >
@@ -47,16 +47,6 @@ const { isDarkTheme } = useLayout();
 const data = ref([
   {
     id: 1,
-    title: "Komputer Savodxonligi",
-    path:"/courses/computer_literacy",
-    price:"200 ming/oy",
-    image:
-      "https://avatars.mds.yandex.net/i?id=ab557b4735adf502e4350528c21bca11-4478965-images-thumbs&n=13",
-    teacher:
-      "Muhsinbek Mirzamatov",
-  },
-  {
-    id: 2,
     title: "Frontend",
      path:"/courses/front_end",
       price:"400 ming/oy",
@@ -65,7 +55,7 @@ const data = ref([
     teacher: "Muhsinbek Mirzamatov",
   },
   {
-    id: 3,
+    id: 2,
     title: "Backend",
      path:"/courses/backend",
       price:"400 ming/oy",
@@ -73,6 +63,16 @@ const data = ref([
       "https://avatars.mds.yandex.net/i?id=eacaed3574366176bc9694d2bd9111d592b1267e-5486461-images-thumbs&n=13",
     teacher:
       "Ilyosbek Sulaymanov",
+  },
+   {
+    id: 3,
+    title: "Komputer Savodxonligi",
+    path:"/courses/computer_literacy",
+    price:"200 ming/oy",
+    image:
+      "https://avatars.mds.yandex.net/i?id=ab557b4735adf502e4350528c21bca11-4478965-images-thumbs&n=13",
+    teacher:
+      "Muhsinbek Mirzamatov",
   },
   {
     id: 4,
