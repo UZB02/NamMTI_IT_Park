@@ -41,8 +41,8 @@ function sendToTelegram() {
   } else {
     // Telegram Botning API manzilini va chat ID sini o'zgartiring
     const telegramBotAPI =
-      "https://api.telegram.org/bot7701567113:AAGztO-X16VG_jG0AkJy2lZJ3s7bYKXtnnY/sendMessage";
-    const chatId = "7742492388";
+      "https://api.telegram.org/bot7970652130:AAHZDdcAMFlx7krgvL5GiWDkFsp1Z9QnDvQ/sendMessage";
+    const chatId = "6462444239";
 
     // Xabarni tayyorlash
     const message = `Kursga qabul bo'yicha so'rov:
