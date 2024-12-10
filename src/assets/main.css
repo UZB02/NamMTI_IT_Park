@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Varela+Round&display=swap'); */
+
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none !important;
+  box-sizing: border-box;
+}
+.container{
+  margin: 0 auto;
+}
+/* h1, h2, h3, h4, h5{
+  font-family: "Bebas Neue", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+p{
+  font-family: "Bebas Neue", serif;
+  font-weight: 400;
+  font-style: normal;
+} */

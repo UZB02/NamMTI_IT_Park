@@ -1,0 +1,32 @@
+{
+  "routes": [
+    {
+      "src": "/courses",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/courses/computer_literacy",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/courses/front_end",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/courses/backend",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/courses/react",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/courses/tg_bot",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/404",
+      "dest": "/index.html"
+    }
+  ]
+}
