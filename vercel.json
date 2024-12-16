@@ -25,6 +25,14 @@
       "dest": "/index.html"
     },
     {
+      "src": "/courses/nodejs",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/courses/nextjs",
+      "dest": "/index.html"
+    },
+    {
       "src": "/404",
       "dest": "/index.html"
     }

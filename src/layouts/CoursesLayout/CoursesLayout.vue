@@ -82,8 +82,8 @@ const categories = ref([
     path: "/courses/tg_bot",
     icon: "pi pi-objects-column",
   },
-  { id: 7, name: "Next.js", path: "/404", icon: "pi pi-objects-column" },
-  { id: 6, name: "Node.js", path: "/404", icon: "pi pi-inbox" },
+  { id: 7, name: "Next.js", path: "/courses/nextjs", icon: "pi pi-objects-column" },
+  { id: 6, name: "Node.js", path: "/courses/nodejs", icon: "pi pi-inbox" },
 ]);
 
 function toggleSideBar() {

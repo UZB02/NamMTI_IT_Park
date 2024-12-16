@@ -68,6 +68,22 @@ const router = createRouter({
       },
     },
     {
+      path: "/courses/nodejs",
+      name: "Nodejs",
+      component: () => import("../views/NodeJSView.vue"),
+      meta: {
+        layout: CoursesLayout,
+      },
+    },
+    {
+      path: "/courses/nextjs",
+      name: "Nextjs",
+      component: () => import("../views/NextJSView.vue"),
+      meta: {
+        layout: CoursesLayout,
+      },
+    },
+    {
       path: "/404",
       name: "404",
       // route level code-splitting
